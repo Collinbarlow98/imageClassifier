@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  {{>head}}
+  <body>
+    {{>header}}
+    <div id="body">
+      <form action="/uploadImage" method="post" enctype="multipart/form-data">
+        <input id='inputImage' type="file" name="image" accept="image/jpeg, image/jpg, image/png" onChange='showChosenImage(this)' disable></input>
+        <button id='uploadButton'>Upload</button>
+      </form>
+      <img id='chosenImage' src='#' alt='Select Image' onChange='setTimeout(classify(), 1000)'/><br/>
+      <label id='chosenImageLabel'></label>
+    </div>
+    {{>footer}}
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="/js/index.js"></script>
+
+  </body>
+</html>
