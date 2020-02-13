@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  {{>head}}
+  <body>
+    {{>header}}
+    <form id='registerform' class='Buttons' action="/register" method="post">
+      <input type="text" name="email" placeholder="email"></input>
+      <input type="text" name="name" placeholder="Username"></input>
+      <input type="password" name="password" placeholder="Password"></input>
+      <input type="password" name="confirmPassword" placeholder="Confirm Password"></input>
+      <button>Register</button>
+    </form>
+    {{>footer}}
+    <script src="/js/log.js"></script>
+  </body>
+</html>

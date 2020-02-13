@@ -1,4 +1,14 @@
 <header>
-  <a href='/'>Home</a>
-  <a href='/savedImages'>Saved Images</a>
+  <div class='header'>
+    <a id='savedImagesLink' href='/savedImages'>Home</a>
+    <a id='homeLink' href='/'>Upload</a>
+  </div>
+  <div class='header'>
+    <a id='userName' href="/{{session.email}}">{{session.name}}</a>
+    <a id='register' href="/register" {{session.loggedin}}>Register</a>
+    <a id='login' href="/login" {{session.loggedin}}>Login</a>
+    <form action="/logout" method="post">
+      <a id='logout' href="#" {{session.loggedout}}>Logout</a>
+    </form>
+  </div>
 </header>

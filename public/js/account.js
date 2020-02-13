@@ -1,9 +1,23 @@
-const imageList = document.getElementById('imageList')
-const uploadButton = document.getElementById('uploadButton')
+const username = document.getElementById('userName')
+const accountImageList = document.getElementById('accountImageList')
 const classifyLabel = document.getElementsByClassName('classifyLabel')
-const savedImagesLink = document.getElementById('savedImagesLink')
+const footer = document.getElementById('footer')
 
-fetch('http://localhost:3000/images')
+function openTab(tabName) {
+  var i;
+  var x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  if(tabName == 'AccountDetails') {
+    footer.style.position = 'absolute'
+  } else {
+    footer.style.position = 'relative'
+  }
+  document.getElementById(tabName).style.display = "flex";
+}
+
+fetch('http://localhost:3000' + window.location.pathname + '/accountImages')
 .then(res => {
   return res.json()
 })
@@ -14,11 +28,12 @@ fetch('http://localhost:3000/images')
     )
   })
   for(let i = 0; i < images.length; i++) {
-    imageList.innerHTML += images[i]
+    accountImageList.innerHTML += images[i]
   }
 })
 
 function predict() {
+
   for(let i = 0; i < classifyLabel.length; i++){
     let obj = classifyLabel[i]
 
@@ -49,6 +64,6 @@ function initializeModel() {
   classifier = ml5.imageClassifier('MobileNet',modelReady)
 }
 
-savedImagesLink.style.color = 'grey'
+username.style.color = 'grey'
 
 initializeModel()

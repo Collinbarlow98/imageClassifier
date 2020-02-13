@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  {{>head}}
+  <body>
+    {{>header}}
+    <div id='AccountTabs'>
+      <button class='Buttons' onClick="openTab('AccountImages')">Account Images</button>
+      <button class='Buttons' onClick="openTab('AccountDetails')">Account Details</button>
+    </div>
+    <div id='AccountImages' class='tab'>
+      <p class='Buttons'>Account Images</p>
+      <ul id='accountImageList'>
+
+      </ul>
+    </div>
+    <div id='AccountDetails' class='tab' style='display: none'>
+      <p id='AccountTitle' class='Buttons'>Account Details</p>
+      <p id='name' class='Buttons'>Name: {{pageUser.name}}</p>
+      <p id='email' class='Buttons'>Email: {{pageUser.email}}</p>
+      <p id='update' class='Buttons' style='display:{{pageUser.hidden}}'>Update Details</p>
+    </div>
+    {{>footer}}
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="/js/account.js"></script>
+  </body>
+</html>

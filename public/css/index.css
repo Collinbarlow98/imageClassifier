@@ -1,5 +1,23 @@
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 li {
+  width: 350px;
+  height: 350px;
   list-style: none;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-color: darkslategrey;
+  justify-content: center;
+  text-align: center;
+  border-radius: 100px;
 }
 
 img {
@@ -10,9 +28,148 @@ img {
 a {
   text-decoration: none;
   color: white;
+  margin: 0 5px 0 0;
 }
 
 body {
+  margin: 0;
   background-color: grey;
   color: white;
+  height: 100%;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  background-color: darkslategrey;
+  border-radius: 50px;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  border-radius: 25px;
+  padding: 5px;
+  background-color: darkslategrey;
+}
+
+#userName {
+  width: 100%;
+}
+
+#AccountDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  margin: 0 500px 0 500px;
+  justify-content: space-around;
+  height: 100%;
+}
+
+#AccountImages {
+  font-size: 24px;
+}
+
+label {
+  font-size: 16px;
+}
+
+#AccountTabs {
+  display: flex;
+  justify-content: center;
+  padding: 0 40px 0 40px;
+}
+
+.Buttons {
+  display: flex;
+  border-radius: 25px;
+  padding: 5px;
+  background-color: darkslategrey;
+  border: none;
+  color: white;
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+  margin: 0 10px 0 10px;
+  align-items: center;
+}
+
+#inputImage {
+  height: 0;
+  padding: 0;
+  margin: 0
+}
+
+#uploadButton {
+  width: 210px;
+  height: 60px;
+  font-size: 16px;
+}
+
+.preview {
+  margin: 10px 0 10px 0;
+}
+
+#body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ImageUpload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ol {
+  padding: 0;
+}
+
+#loginform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  height: 200px;
+  justify-content: space-evenly;
+}
+
+#registerform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  height: 200px;
+  justify-content: space-evenly;
+}
+
+#name {
+  width: 100%;
+  margin: 5px;
+}
+
+#email {
+  width: 100%;
+  margin: 5px;
+}
+
+#update {
+  margin: 5px;
+}
+
+#AccountTitle {
+  margin: 5px;
 }

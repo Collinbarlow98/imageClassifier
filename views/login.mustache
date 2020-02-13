@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  {{>head}}
+  <body>
+    {{>header}}
+    <form id='loginform' class='Buttons' action="/login" method="post">
+      <input type="text" name="email" placeholder="Email"></input>
+      <input type="password" name="password" placeholder="Password"></input>
+      <button>Login</button>
+    </form>
+    {{>footer}}
+    <script src="/js/log.js"></script>
+  </body>
+</html>
